@@ -1,10 +1,14 @@
+name: Ejemplo de Workflow
+
+on: [push, pull_request]
+
 jobs:
   my_first_job:
     runs-on: ubuntu-latest
     steps:
-      # This step checks out a copy of your repository.
+      # Este paso verifica una copia de tu repositorio.
       - name: My first step - check out repository
         uses: actions/checkout@v4
-      # This step references the directory that contains the action.
+      # Este paso referencia el directorio que contiene la acción.
       - name: Use local hello-world-action
         uses: ./.github/actions/hello-world-action
